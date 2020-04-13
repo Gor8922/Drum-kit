@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Drum Kit</title>
+    </head>
+    <body>
+        <div>
+            <button id="b1">1</button>
+            <button id="b2">2</button>
+            <button id="b3">3</button>
+            <br>
+            <button id="b4">4</button>
+            <button id="b5">5</button>
+            <button id="b6">6</button>
+
+        </div>
+        
+            <audio id="bd">
+                <source src="https://www.sessiontown.com/games/drums/audios/bd.mp3">
+            </audio>
+            <audio id="sd">
+                <source src="https://www.sessiontown.com/games/drums/audios/sd.mp3">
+            </audio>
+            <audio id="rim">
+                <source src="https://www.sessiontown.com/games/drums/audios/rim.mp3">
+            </audio>
+            <audio id="hho">
+                <source src="https://www.sessiontown.com/games/drums/audios/hho.mp3">
+            </audio>
+            <audio id="hhc">
+                <source src="https://www.sessiontown.com/games/drums/audios/hhc.mp3" >
+            </audio>
+            <audio id="tomm">
+                <source src="https://www.sessiontown.com/games/drums/audios/tomm.mp3" >
+            </audio>
+        
+         <script>
+             let b1 = document.querySelector('#b1');
+             let b2 = document.querySelector('#b2');
+             let b3 = document.querySelector('#b3');
+             let b4 = document.querySelector('#b4');
+             let b5 = document.querySelector('#b5');
+             let b6 = document.querySelector('#b6');
+             let bd = document.querySelector('#bd');
+             let sd = document.querySelector('#sd');
+             let rim = document.querySelector('#rim');
+             let hho = document.querySelector('#hho');
+             let hhc = document.querySelector('#hhc');
+             let tomm = document.querySelector('#tomm');
+             
+             b1.addEventListener('click' , function(){
+                 bd.play()
+             });
+             b2.addEventListener('click' , function(){
+                 sd.play()
+             });
+             b3.addEventListener('click' , function(){
+                 rim.play()
+             });
+             b4.addEventListener('click' , function(){
+                 hho.play()
+             });
+             b5.addEventListener('click' , function(){
+                 hhc.play()
+             });
+             b6.addEventListener('click' , function(){
+                 tomm.play()
+             });
+
+             document.addEventListener('keypress', function(event){
+                 if (event.key == '1'){
+                     bd.play()
+                 } else if (event.key == '2') {
+                     sd.play()
+                 } else if (event.key == '3'){
+                     rim.play()
+                 } else if (event.key == '4'){
+                     hho.play()
+                 } else if (event.key == '5'){
+                     hhc.play ()
+                 } else if (event.key == '6'){
+                     tomm.play()
+                 }
+             })
+         </script>
+    </body>
+</html>
